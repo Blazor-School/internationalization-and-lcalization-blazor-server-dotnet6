@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferTranslationWithCookies", "DeferTranslationWithCookies\DeferTranslationWithCookies.csproj", "{B4B17085-9911-450C-9308-D89F783C7CAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4B17085-9911-450C-9308-D89F783C7CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B17085-9911-450C-9308-D89F783C7CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B17085-9911-450C-9308-D89F783C7CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B17085-9911-450C-9308-D89F783C7CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B632154D-9CE5-4C11-BE64-0B53B1C1D50D}
+	EndGlobalSection
+EndGlobal
