@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeferTranslationWithCookies
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferTranslationWithUrl", "DeferTranslationWithUrl\DeferTranslationWithUrl.csproj", "{B17E0D9E-9E73-418F-B02D-DD314493E1C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferTranslationWithRequestHeader", "DeferTranslationWithRequestHeader\DeferTranslationWithRequestHeader.csproj", "{A0B9EB49-2AD2-4533-ACA5-B4A32F0D81D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B17E0D9E-9E73-418F-B02D-DD314493E1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B17E0D9E-9E73-418F-B02D-DD314493E1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B17E0D9E-9E73-418F-B02D-DD314493E1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B9EB49-2AD2-4533-ACA5-B4A32F0D81D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B9EB49-2AD2-4533-ACA5-B4A32F0D81D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B9EB49-2AD2-4533-ACA5-B4A32F0D81D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B9EB49-2AD2-4533-ACA5-B4A32F0D81D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
