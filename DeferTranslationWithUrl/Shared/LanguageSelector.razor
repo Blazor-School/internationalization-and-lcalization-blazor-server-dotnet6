@@ -1,5 +1,6 @@
 ﻿@using Microsoft.Extensions.Localization
 @using System.Globalization
+@using System.Web
 @inject NavigationManager NavigationManager
 
 <select @onchange="OnChangeLanguage">
@@ -11,10 +12,12 @@
 @code {
     private void OnChangeLanguage(ChangeEventArgs e)
     {
-        var uri = new Uri(NavigationManager.Uri).GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+        var uri = new Uri(NavigationManager.Uri);
         var culture = CultureInfo.GetCultureInfo(e.Value as string);
         var cultureEscaped = Uri.EscapeDataString(culture.Name);
-        var uriEscaped = Uri.EscapeDataString(uri);
-        NavigationManager.NavigateTo($"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}", forceLoad: true);
+        var urlParameters = HttpUtility.ParseQueryString(uri.Query);
+        urlParameters["culture"] = cultureEscaped;
+        string urlWithoutQuery = uri.GetComponents(UriComponents.Path, UriFormat.Unescaped);
+        NavigationManager.NavigateTo($"{urlWithoutQuery}?{urlParameters.ToString()}", forceLoad: true);
     }
 }

@@ -1,0 +1,26 @@
+﻿@using System.Globalization
+@using System.Web
+@inject NavigationManager NavigationManager
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        var urlParameters = HttpUtility.ParseQueryString(uri.Query);
+        CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(urlParameters["culture"] ?? "en");
+        CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(urlParameters["ui-culture"] ?? urlParameters["culture"] ?? "en");
+    }
+}
