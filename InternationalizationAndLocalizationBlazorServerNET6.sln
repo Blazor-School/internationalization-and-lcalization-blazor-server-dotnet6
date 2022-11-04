@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeferTranslationWithUrl", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeferTranslationWithRequestHeader", "DeferTranslationWithRequestHeader\DeferTranslationWithRequestHeader.csproj", "{A0B9EB49-2AD2-4533-ACA5-B4A32F0D81D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantTranslationWithCookies", "InstantTranslationWithCookies\InstantTranslationWithCookies.csproj", "{4561EB2F-3DB2-48A8-B834-4FDEB368A35C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstantTranslationWithCookies", "InstantTranslationWithCookies\InstantTranslationWithCookies.csproj", "{4561EB2F-3DB2-48A8-B834-4FDEB368A35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantTranslationWithUrl", "InstantTranslationWithUrl\InstantTranslationWithUrl.csproj", "{218371F7-220C-4294-9256-5AB289ECD083}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4561EB2F-3DB2-48A8-B834-4FDEB368A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4561EB2F-3DB2-48A8-B834-4FDEB368A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4561EB2F-3DB2-48A8-B834-4FDEB368A35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{218371F7-220C-4294-9256-5AB289ECD083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218371F7-220C-4294-9256-5AB289ECD083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218371F7-220C-4294-9256-5AB289ECD083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218371F7-220C-4294-9256-5AB289ECD083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
