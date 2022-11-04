@@ -8,7 +8,7 @@ namespace InstantTranslationWithUrl.Utils;
 public class BlazorSchoolRequestCultureProvider : RequestCultureProvider
 {
     private readonly string _defaultLanguage;
-    private string _selectedLanguage;
+    private string? _selectedLanguage;
 
     public BlazorSchoolRequestCultureProvider(string defaultLanguage)
     {
@@ -35,7 +35,7 @@ public class BlazorSchoolRequestCultureProvider : RequestCultureProvider
         }
         else
         {
-            return Task.FromResult(new ProviderCultureResult(_selectedLanguage));
+            return Task.FromResult<ProviderCultureResult?>(new ProviderCultureResult(_selectedLanguage));
         }
     }
 
