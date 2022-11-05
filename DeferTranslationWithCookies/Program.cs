@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
