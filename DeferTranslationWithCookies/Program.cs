@@ -13,7 +13,10 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     // options.SetDefaultCulture("fr");
     options.AddSupportedCultures(new[] { "en", "fr" });
     options.AddSupportedUICultures(new[] { "en", "fr" });
-    options.RequestCultureProviders = new List<IRequestCultureProvider>() { new CookieRequestCultureProvider() };
+    options.RequestCultureProviders = new List<IRequestCultureProvider>()
+    {
+        new CookieRequestCultureProvider()
+    };
 });
 
 var app = builder.Build();
