@@ -1,6 +1,9 @@
 ﻿@using System.Globalization
 @using System.Web
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
 @inject NavigationManager NavigationManager
+@inject IOptions<RequestLocalizationOptions> RequestLocalizationOptions
 
 <Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
@@ -20,7 +23,9 @@
     {
         var uri = new Uri(NavigationManager.Uri);
         var urlParameters = HttpUtility.ParseQueryString(uri.Query);
-        CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(urlParameters["culture"] ?? "en");
-        CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(urlParameters["ui-culture"] ?? urlParameters["culture"] ?? "en");
+        var defaultCulture = RequestLocalizationOptions.Value.DefaultRequestCulture.Culture;
+        var cultureProvider = RequestLocalizationOptions.Value.RequestCultureProviders.First(p => p is QueryStringRequestCultureProvider) as QueryStringRequestCultureProvider;
+        CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(urlParameters[cultureProvider.QueryStringKey] ?? defaultCulture.Name);
+        CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(urlParameters[cultureProvider.UIQueryStringKey] ?? CultureInfo.CurrentCulture.Name);
     }
 }
