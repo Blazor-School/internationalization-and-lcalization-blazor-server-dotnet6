@@ -18,7 +18,7 @@ public class BlazorSchoolLanguageNotifier
             if (component is not null)
             {
                 var stateHasChangedMethod = component.GetType()?.GetMethod("StateHasChanged", BindingFlags.Instance | BindingFlags.NonPublic);
-                stateHasChangedMethod?.Invoke(component, null);
+                _ = (stateHasChangedMethod?.Invoke(component, null));
             }
         }
     }
